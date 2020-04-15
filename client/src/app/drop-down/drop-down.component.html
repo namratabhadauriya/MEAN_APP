@@ -1,0 +1,11 @@
+<div ngbDropdown class="d-inline-block">
+    <label *ngIf="name!='company'" id = "yearLabel">{{name}}</label>
+    <div class="btn btn-outline-primary" id="dropdown" ngbDropdownToggle>
+        {{selectedOption}}
+    </div>
+    <div ngbDropdownMenu aria-labelledby="dropdown">
+        <button ngbDropdownItem *ngFor="let data of datalist" (click)="selectValue({data: data, name :this.name})">
+            {{data}}
+        </button>
+    </div>
+</div>

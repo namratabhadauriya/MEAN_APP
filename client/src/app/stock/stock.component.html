@@ -1,0 +1,16 @@
+<div id="container">
+    <div id="drop-down-container">
+        <app-drop-down [datalist]="companies" name="company" (selectOption)="onSelect($event)"
+            [selectedOption]="company">
+        </app-drop-down>
+        <app-drop-down [datalist]="yearFilter" name="Start Year" (selectOption)="onSelect($event)"
+            [selectedOption]="from">
+        </app-drop-down>
+        <app-drop-down [datalist]="yearFilter" name="End Year" (selectOption)="onSelect($event)" [selectedOption]="to">
+        </app-drop-down>
+    </div>
+
+    <div *ngIf="company && from && to">
+        <app-chart [chartData]="chartData" [onUpdateChartSubject]="onUpdateChartSubject.asObservable()"></app-chart>
+    </div>
+</div>

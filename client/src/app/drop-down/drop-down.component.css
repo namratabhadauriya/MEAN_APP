@@ -1,0 +1,21 @@
+#yearLabel {
+    padding-right:10px !important;
+    color: white;
+}
+
+#drop-down-container {
+    display: flex;
+    padding:50px;
+    text-align: center;
+    background: #575759;
+}
+
+#drop-down-container app-drop-down{
+    flex:1;
+}
+
+.btn-outline-primary {
+    color: black;
+    border-color: #76bf43;
+    background-color: #76bf43;
+}
